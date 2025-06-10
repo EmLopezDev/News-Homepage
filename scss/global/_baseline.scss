@@ -13,7 +13,7 @@ body {
     width: 100%;
     font-family: "Inter", sans-serif;
     background-color: var(--color-white);
-    padding: 0 u.rem(16);
+    padding: 0 u.rem(16) u.rem(80);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,4 +26,5 @@ ul {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
