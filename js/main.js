@@ -37,7 +37,7 @@ sidebarLinks.forEach((link) => {
 });
 
 window.addEventListener("resize", () => {
-    if (this.innerWidth > 1100) {
+    if (this.innerWidth >= 1100) {
         hideSidebar();
     }
 });
