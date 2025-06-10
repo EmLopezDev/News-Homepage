@@ -1,0 +1,58 @@
+@use "../utils/" as u;
+
+.sidebar__container {
+    height: 100dvh;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: var(--color-navy-950-op);
+    display: none;
+
+    @include u.breakpoint(medium) {
+        display: none;
+    }
+}
+
+.sidebar {
+    height: 100%;
+    width: u.rem(256);
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--color-white);
+    padding-block: u.rem(24);
+    padding-inline: u.rem(28);
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(88);
+
+    @include u.breakpoint(small) {
+        width: u.rem(312);
+        padding-block: u.rem(28);
+        padding-inline: u.rem(40);
+    }
+
+    &__button {
+        width: u.rem(30);
+        height: u.rem(30);
+        align-self: flex-end;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: u.rem(24);
+    }
+
+    & a {
+        color: var(--color-navy-600);
+
+        &:hover {
+            color: var(--color-red-500);
+        }
+    }
+}

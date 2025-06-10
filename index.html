@@ -13,16 +13,35 @@
             sizes="32x32"
             href="./assets/images/favicon-32x32.png"
         />
-
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="./dist/styles.css"
+        />
         <title>Frontend Mentor | News homepage</title>
     </head>
     <body>
-        <header>
-            <img
-                src="./images/logo.svg"
-                alt="w logo"
-            />
-            <nav style="display: none">
+        <header class="header">
+            <a href="#">
+                <img
+                    class="header__img"
+                    src="./images/logo.svg"
+                    alt="w logo"
+                />
+            </a>
+            <nav class="header__nav">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">New</a></li>
@@ -32,6 +51,7 @@
                 </ul>
             </nav>
             <button
+                class="header__hamburger"
                 type="menu"
                 aria-label="open menu"
             >
@@ -41,8 +61,8 @@
                 />
             </button>
         </header>
-        <main>
-            <section>
+        <main class="content__container">
+            <section class="content__hero">
                 <img
                     src="./images/image-web-3-mobile.jpg"
                     alt=""
@@ -120,25 +140,28 @@
                 </article>
             </section>
         </main>
-        <aside style="display: none">
-            <button
-                type="button"
-                aria-label="close menu"
-            >
-                <img
-                    src="./images/icon-menu-close.svg"
-                    alt="close icon"
-                />
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">New</a></li>
-                    <li><a href="#">Popular</a></li>
-                    <li><a href="#">Trending</a></li>
-                    <li><a href="#">Categories</a></li>
-                </ul>
-            </nav>
+        <aside class="sidebar__container">
+            <div class="sidebar">
+                <button
+                    class="sidebar__button"
+                    type="button"
+                    aria-label="close menu"
+                >
+                    <img
+                        src="./images/icon-menu-close.svg"
+                        alt="close icon"
+                    />
+                </button>
+                <nav class="sidebar__nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Popular</a></li>
+                        <li><a href="#">Trending</a></li>
+                        <li><a href="#">Categories</a></li>
+                    </ul>
+                </nav>
+            </div>
         </aside>
     </body>
 </html>

@@ -1,0 +1,55 @@
+@use "../utils/" as u;
+
+.header {
+    min-width: u.rem(343);
+    max-width: u.rem(1200);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: u.rem(28);
+    background-color: var(--color-white);
+    position: sticky;
+    inset: 0;
+    z-index: 1;
+
+    @include u.breakpoint(medium) {
+        margin-block: u.rem(32);
+    }
+
+    &__img {
+        width: u.rem(45);
+    }
+
+    &__nav {
+        display: none;
+
+        @include u.breakpoint(medium) {
+            display: block;
+        }
+
+        & ul {
+            display: flex;
+            gap: u.rem(40);
+        }
+
+        & a {
+            color: var(--color-navy-600);
+
+            &:hover {
+                color: var(--color-red-500);
+            }
+        }
+    }
+
+    &__hamburger {
+        border: none;
+        background-color: transparent;
+        height: u.rem(17);
+        cursor: pointer;
+
+        @include u.breakpoint(medium) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@use "../utils/" as u;
+
+.content__container {
+    min-width: u.rem(343);
+    max-width: u.rem(1200);
+    width: 100%;
+}
+
+.content__hero {
+    & img {
+        width: 100%;
+    }
+}
