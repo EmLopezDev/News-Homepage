@@ -30,15 +30,25 @@
             rel="stylesheet"
             href="./dist/styles.css"
         />
+        <script
+            defer
+            src="./js/main.js"
+        ></script>
         <title>Frontend Mentor | News homepage</title>
     </head>
     <body>
-        <header class="header">
-            <a href="#">
+        <header
+            id="header"
+            class="header"
+        >
+            <a
+                id="icon__link"
+                href="#"
+            >
                 <img
                     class="header__img"
                     src="./images/logo.svg"
-                    alt="w logo"
+                    alt="company logo"
                 />
             </a>
             <nav class="header__nav">
@@ -51,6 +61,7 @@
                 </ul>
             </nav>
             <button
+                id="hamburger"
                 class="header__hamburger"
                 type="menu"
                 aria-label="open menu"
@@ -62,7 +73,10 @@
             </button>
         </header>
         <main class="content__container">
-            <section class="content__hero">
+            <section
+                id="hero"
+                class="content__hero"
+            >
                 <div class="content__hero--img"></div>
                 <div class="content__hero--content">
                     <h1 class="content__hero--header">
@@ -84,7 +98,10 @@
                     </div>
                 </div>
             </section>
-            <section class="content__new">
+            <section
+                id="new"
+                class="content__new"
+            >
                 <h2 class="content__new--header">New</h2>
                 <article class="content__new--article">
                     <h3 class="content__new--article-header">
@@ -113,7 +130,10 @@
                     </p>
                 </article>
             </section>
-            <section class="content__popular">
+            <section
+                id="popular"
+                class="content__popular"
+            >
                 <article class="content__popular--article">
                     <img
                         class="content__popular--article-img"
@@ -170,9 +190,13 @@
                 </article>
             </section>
         </main>
-        <aside class="sidebar__container">
+        <aside
+            id="sidebar"
+            class="sidebar__container"
+        >
             <div class="sidebar">
                 <button
+                    id="close"
                     class="sidebar__button"
                     type="button"
                     aria-label="close menu"
@@ -184,11 +208,46 @@
                 </button>
                 <nav class="sidebar__nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">New</a></li>
-                        <li><a href="#">Popular</a></li>
-                        <li><a href="#">Trending</a></li>
-                        <li><a href="#">Categories</a></li>
+                        <li>
+                            <a
+                                class="sidebar__link"
+                                href="#hero"
+                            >
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="sidebar__link"
+                                href="#new"
+                            >
+                                New
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="sidebar__link"
+                                href="#popular"
+                            >
+                                Popular
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="sidebar__link"
+                                href="#"
+                            >
+                                Trending
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="sidebar__link"
+                                href="#"
+                            >
+                                Categories
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
