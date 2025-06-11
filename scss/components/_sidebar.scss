@@ -19,18 +19,23 @@
     width: u.rem(256);
     position: fixed;
     top: 0;
-    right: 0;
+    right: -400px;
     background-color: var(--color-white);
     padding-block: u.rem(24);
     padding-inline: u.rem(28);
     display: flex;
     flex-direction: column;
     gap: u.rem(88);
+    transition: right 200ms ease-in-out;
 
     @include u.breakpoint(small) {
         width: u.rem(312);
         padding-block: u.rem(28);
         padding-inline: u.rem(40);
+    }
+
+    &.is-open {
+        right: 0;
     }
 
     &__button {
@@ -54,5 +59,12 @@
         &:hover {
             color: var(--color-red-500);
         }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar {
+        right: 0;
+        transition: none;
     }
 }
